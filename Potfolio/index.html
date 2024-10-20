@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aman Kumar Gupta</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Final-year ECE undergraduate with a passion for software development. Strong in programming, algorithms, and problem-solving. Eager to apply skills in creating efficient, scalable solutions and learning new technologies.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>
+                <img src="project1.jpg" alt="Project 1">
+                <p>Built an autonomous robot using IR sensors for navigation and L293D for motor control. Gained experience in embedded systems, sensor interfacing, and real-time control.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error" id="nameError" style="color:red;"></span><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError" style="color:red;"></span><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <span class="error" id="messageError" style="color:red;"></span><br><br>
+
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <script>
+        function validateForm() {
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            let valid = true;
+
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                valid = false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                valid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").innerText = "Message is required.";
+                valid = false;
+            } else if (message.length < 10) {
+                document.getElementById("messageError").innerText = "Message must be at least 10 characters long.";
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+
+</body>
+</html>

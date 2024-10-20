@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>What is your favorite color?</h1>
+    <input type="text" id="colorInput" placeholder="Enter your favorite color">
+    <button onclick="displayColor()">Submit</button>
+    <p id="colorDisplay"></p>
+
+    <script>
+        function displayColor() {
+            const color = document.getElementById('colorInput').value;
+
+            const colorDisplay = document.getElementById('colorDisplay');
+            colorDisplay.innerHTML = `Your favorite color is: <span style="color: ${color};">${color}</span>`;
+        }
+    </script>
+</body>
+</html>
