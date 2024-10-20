@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import GreetingMessage from './GreetingMessage';
 
 function App() {
+  const name = "Aman Gupta";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to My Greeting App</h1>
+      <GreetingMessage name={name} /> {/* Pass name as a prop */}
     </div>
   );
 }
