@@ -15,7 +15,7 @@ This repository contains the tasks and projects completed as part of my internsh
 ## Job Role: Application Development (Web and Mobile)
 
 ## Contents
-The repository is organized as follows:
+**The repository is organized as follows:**
 
 ### Tasks
 
