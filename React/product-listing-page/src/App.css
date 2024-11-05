@@ -1,0 +1,29 @@
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item,
+.cart-item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+}
